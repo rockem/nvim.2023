@@ -3,6 +3,7 @@ return {
 
   config = function()
     local rt = require("rust-tools")
+    local lsp_bindings = require("rockem.common.lsp-bindings")
 
     rt.setup({
       runnables = {
@@ -16,6 +17,7 @@ return {
       },
 
       server = {
+        on_attach = lsp_bindings.keymap,
         settings ={
           ["rust-analyzer"] = {
             -- enable clippy on save
@@ -24,9 +26,6 @@ return {
             },
           },
         },
-        on_attach = function(_, bufnr)
-
-        end,
       },
     })
   end
