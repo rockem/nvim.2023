@@ -39,3 +39,8 @@ opt.splitbelow = true -- split horizontal window to the bottom
 
 -- turn off swapfile
 opt.swapfile = false
+
+-- completion
+opt.wildmode = "longest:full,full"
+opt.wildmenu = true
+opt.wildoptions=pum
