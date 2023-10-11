@@ -4,4 +4,4 @@ vim.g.mapleader = " "
 local keymap = vim.keymap -- for conciseness
 
 
-keymap.set("n", "<S-TAB>", ":bprevious<CR>")
+keymap.set({"n", "i"}, "<C-TAB>", ":b#<CR>")
