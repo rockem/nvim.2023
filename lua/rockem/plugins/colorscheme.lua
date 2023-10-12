@@ -16,5 +16,10 @@ return {
     version = false,
     lazy = false,
     priority = 1000,
+  }, {
+    "lifepillar/vim-solarized8",
+    version = false,
+    lazy = false,
+    priority = 1000,
   }
-} 
+}
