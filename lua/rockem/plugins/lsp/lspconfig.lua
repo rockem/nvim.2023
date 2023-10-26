@@ -63,5 +63,9 @@ return {
 				schemas = { schemastore.yaml.schemas() },
 			},
 		})
+
+    lspconfig["jsonls"].setup({
+      capabilities = capabilities,
+    })
 	end,
 }
