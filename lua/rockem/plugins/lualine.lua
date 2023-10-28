@@ -55,7 +55,9 @@ return {
       --   theme = my_lualine_theme,
       -- },
       sections = {
-        lualine_c = {{ 'filename', path = 4}},
+        lualine_c = {
+          { require('auto-session.lib').current_session_name },
+          { 'filename', path = 4}},
         lualine_x = {
           {
             lazy_status.updates,
