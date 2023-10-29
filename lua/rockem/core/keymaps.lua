@@ -10,8 +10,14 @@ keymap.set("n", "<leader>sx", ":close<CR>") -- close current split window
 
 keymap.set("n", "<C-TAB>", ":b#<CR>")
 
+-- Fuzzy finder
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files in cwd" })
-keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "Fuzzy find recent files" })
+keymap.set("n", "<leader>fr", "<cmd>Telescope frecency workspace=CWD<cr>", { desc = "Fuzzy find recent files" })
 keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", { desc = "Find string in cwd" })
 keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd" })
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers sort_lastused=true<cr>", { desc = "Find buffers" })
+
+-- Git
+keymap.set("n", "<leader>gs", "<cmd>Git<cr>", { desc = "Git status" })
+keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<cr>", { desc = "Get branches" })
+keymap.set("n", "<leader>gc", "<cmd>Telescope git_commits<cr>", { desc = "Get branches" })

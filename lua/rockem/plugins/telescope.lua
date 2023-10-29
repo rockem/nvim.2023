@@ -5,6 +5,7 @@ return {
 		"nvim-lua/plenary.nvim",
 		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 		"nvim-telescope/telescope-file-browser.nvim",
+    "nvim-telescope/telescope-frecency.nvim",
 		"nvim-tree/nvim-web-devicons",
 	},
 	config = function()
@@ -14,11 +15,11 @@ return {
 		telescope.setup({
 			defaults = {
 				path_display = { "truncate " },
-        layout_config = {
-          preview_width = 0.6,
-          width = 0.8,
-        },
-        sorting_strategy = ascending,
+				layout_config = {
+					preview_width = 0.6,
+					width = 0.8,
+				},
+				sorting_strategy = ascending,
 				mappings = {
 					i = {
 						["<C-k>"] = actions.move_selection_previous, -- move to prev result
@@ -36,5 +37,6 @@ return {
 
 		telescope.load_extension("fzf")
 		telescope.load_extension("file_browser")
+		telescope.load_extension("frecency")
 	end,
 }
