@@ -1,10 +1,16 @@
 return {
 	{
-		"bluz71/vim-nightfly-guicolors",
+		-- "bluz71/vim-nightfly-guicolors",
+    -- "catppuccin/nvim",
+    -- "rebelot/kanagawa.nvim",
+    "Shatur/neovim-ayu",
 		priority = 1000, -- Make sure this loads before all others
 		config = function()
+      require("ayu").setup({
+        mirage = true
+      })
 			-- load colorscheme here
-			vim.cmd([[colorscheme nightfly]])
+			vim.cmd([[colorscheme ayu]])
 		end,
 	},
 	{

@@ -11,7 +11,7 @@ require("lazy").setup({
   {import = "rockem.plugins.lsp"},
 }, {
   install = {
-    colorscheme = { "nightfly" },
+    colorscheme = { "ayu" },
   },
   checker = {
     enabled = true,

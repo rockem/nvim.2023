@@ -14,12 +14,12 @@ return {
 
 		telescope.setup({
 			defaults = {
-				path_display = { "truncate " },
+				path_display = { "smart" },
 				layout_config = {
 					preview_width = 0.6,
 					width = 0.8,
 				},
-				sorting_strategy = ascending,
+				sorting_strategy = "ascending",
 				mappings = {
 					i = {
 						["<C-k>"] = actions.move_selection_previous, -- move to prev result
@@ -27,6 +27,10 @@ return {
 						["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
 					},
 				},
+        file_ignore_patterns = {
+          "node_modules",
+          "target"
+        }
 			},
 			pickers = {
 				colorscheme = {
